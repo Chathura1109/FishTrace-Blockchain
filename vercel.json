@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/anchors",
+      "destination": "/api/anchors"
+    },
+    {
+      "source": "/anchors/:transactionReference",
+      "destination": "/api/anchors/:transactionReference"
+    }
+  ]
+}
+

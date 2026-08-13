@@ -1,0 +1,29 @@
+{
+  "name": "fishtrace-blockchain-service",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "compile": "node scripts/compile-contract.js",
+    "configure:key": "node scripts/normalize-private-key.js",
+    "configure:token": "node scripts/configure-service-token.js",
+    "deploy:testnet": "node scripts/deploy-contract.js",
+    "local:node": "hardhat node",
+    "local:deploy": "node --env-file=.env.hardhat scripts/deploy-local.js",
+    "local:server": "node --env-file=.env.hardhat scripts/local-server.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "ethers": "^6.15.0"
+  },
+  "devDependencies": {
+    "hardhat": "^3.13.0",
+    "solc": "^0.8.30"
+  },
+  "overrides": {
+    "tmp": "0.2.7"
+  }
+}
